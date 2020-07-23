@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 65.625em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(229, 57%, 11%);
+
+  @media only screen and (max-width: 34.375em) {
+    background-image: url("./images/bg-mobile.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
+
+.container {
+  height: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: flex-end;
+
+  @media only screen and (max-width: 50em) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__left {
+    padding: 3rem;
+    padding-right: 8rem;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 1rem 10rem 1rem 1rem;
+    margin-right: 5rem;
+
+    @media only screen and (max-width: 50em) {
+      margin-bottom: 3rem;
+      padding-right: 52%;
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: 34.375em) {
+      margin-bottom: 3rem;
+      padding-right: 45%;
+    }
+
+    @media only screen and (max-width: 28.125em) {
+      padding-right: 35%;
+    }
+  }
+
+  &__right {
+    height: 75%;
+    padding: 3.5rem;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 1rem;
+    position: relative;
+  }
+}
+
+.company {
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    &--icon {
+      height: 4.5rem;
+      width: 5rem;
+      padding: 1.1rem 1rem;
+      background-color: hsl(229, 57%, 11%);
+      margin: 1rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.content {
+  &__text {
+    font-size: 1.4rem;
+    color: hsl(243, 100%, 93%);
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  &__bar {
+    height: 2rem;
+    padding: 0.4rem;
+    width: 55rem;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 4rem;
+
+    @media only screen and (max-width: 34.375em) {
+      width: 45rem;
+    }
+
+    @media only screen and (max-width: 28.125em) {
+      width: 37rem;
+    }
+
+    @media only screen and (max-width: 23.4375em) {
+      width: 30rem;
+    }
+
+    &--color {
+      height: 100%;
+      width: 81.5%;
+      background-image: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      border-radius: 4rem;
+    }
+  }
+
+  &__lower-limit {
+    position: absolute;
+    left: 4.5rem;
+    color: hsl(243, 100%, 93%);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
+    font-weight: 700;
+  }
+
+  &__higher-limit {
+    position: absolute;
+    right: 4.5rem;
+    color: hsl(243, 100%, 93%);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
+    font-weight: 700;
+  }
+
+  &__tag {
+    padding: 2rem;
+    padding-bottom: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    font-family: "Raleway", sans-serif;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 85% 70%, 0 70%);
+    background-color: white;
+    border-radius: 1rem;
+
+    position: absolute;
+    top: -3.5rem;
+    right: 4rem;
+  }
+}
+
+.big {
+  font-size: 3rem;
+  color: black;
+}
+
+.bg-image {
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: hsl(243, 100%, 93%);
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 2px;
+}
+
+.link {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
